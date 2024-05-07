@@ -33,10 +33,12 @@
       return
     }
     else {
-      pokedexs = _.filter(pokedexs, (o) => {
+      pokedexs = _.filter(origData, (o) => {
         return o.name.includes(searchValue) || o.url.includes(searchValue)
       })
     }
+
+    console.log(pokedexs)
   }
   
   function sortId() {
@@ -68,6 +70,9 @@
   {#each pokedexs as pokedex (pokedex.url)}
     <PokedexCard name={pokedex.name} url={pokedex.url}/>
   {/each}
+  {#if pokedexs.length === 0}
+    <div class="text-center">No data found</div>
+  {/if}
 </div>
 
 <!-- Load More Button -->

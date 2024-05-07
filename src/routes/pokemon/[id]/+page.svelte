@@ -8,6 +8,7 @@ import PokemonDetailTable from '../../component/PokemonDetailTable.svelte';
 import PokemonStatTable from '../../component/PokemonStatTable.svelte';
 import { formatNumber } from '../../../utils/utils';
   import PokemonWeakness from '../../component/PokemonWeakness.svelte';
+  import PokemonImages from '../../component/PokemonImages.svelte';
 
 const api = new PokemonClient();
 
@@ -50,10 +51,15 @@ const navigate = (id: number) => {
     <PokemonWeakness pokemon={pokemon}/>
   </div>
 
+  <!-- Other Images -->
+  <div>
+    <PokemonImages pokemon={pokemon}/>
+  </div>
+
   <!-- Button -->
   <div class="mx-5 mt-10 flex justify-between">
     <button 
-      class="bg-green-500 rounded px-3 text-white text-xl text-center hover:bg-green-600"
+      class="w-1/4 bg-green-500 rounded px-3 text-white text-xl text-center hover:bg-green-600"
       on:click={() => {
         if(id === 1)
           navigate(1025)
@@ -64,7 +70,7 @@ const navigate = (id: number) => {
       &#129092; #{parseInt(formatNumber(id - 1)) === 0 ? formatNumber(1025) : formatNumber(id - 1)}
     </button>
     <button
-      class="bg-green-500 rounded px-3 text-white text-xl text-center hover:bg-green-600"
+      class="w-1/4 bg-green-500 rounded px-3 text-white text-xl text-center hover:bg-green-600"
       on:click={() => {
         if(id === 1025)
           navigate(1)
