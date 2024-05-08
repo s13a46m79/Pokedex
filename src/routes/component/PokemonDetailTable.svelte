@@ -7,7 +7,7 @@
 
 <div>
   <div class="mt-5 w-full md:mt-32 md:w-full text-bold text-3xl font-mono">
-    {pokemon ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : ''}
+    {pokemon ? formatName(pokemon.name) : ''}
   </div>
   <table class="bg-blue-500 w-full h-fit rounded-tr-lg rounded-bl-lg text-white font-mono">
     <tr>

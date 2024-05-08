@@ -28,7 +28,7 @@ onMount(async () => {
 const navigate = (id: number) => {
   console.log(id)
   if(id !== 0) {
-    goto(`/pokemon/${id}`);
+    goto(`${id}`);
     fetchPokemon(id);
   }
 };

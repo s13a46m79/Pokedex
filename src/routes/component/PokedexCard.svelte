@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Pokemon } from "pokenode-ts";
   import { goto } from "$app/navigation"
+  import { formatName } from "../../utils/utils";
 
   export let name;
   export let url;
@@ -15,7 +16,7 @@
   })()
 
   const navigate = () => {
-    goto(`/pokemon/${data?.id}`)
+    goto(`/Pokedex/pokemon/${data?.id}`)
   }
 
 </script>
@@ -36,6 +37,6 @@
   </div>
 
   <div class="w-full max-auto text-center font-mono">
-    {data?.name}
+    {data?.name ? formatName(data?.name) : 'Loading...'}
   </div>
 </div>

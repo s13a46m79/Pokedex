@@ -44,7 +44,7 @@ function deleteWeakness() {
         <p>Loading...</p>
       {:then weakness}
         {#each weakness as weak}
-            <img alt={weakness + "_image"} src={`https://veekun.com/dex/media/types/en/${weak.toLocaleLowerCase()}.png`}>
+            <img width="50" alt={weakness + "_image"} src={`https://veekun.com/dex/media/types/en/${weak.toLocaleLowerCase()}.png`}>
         {/each}
       {/await}
     {:else}
