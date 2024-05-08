@@ -1,18 +1,10 @@
-# create-svelte
+## To run the website
+1. clone the repository to local
+2. run npm install
+3. run npm run dev
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+# Website URL
+https://pokedex-dq8cnqrg6-s13a46m79s-projects.vercel.app/
 
 ## Developing
 
