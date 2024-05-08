@@ -2,6 +2,7 @@
   import PokedexCard from "./component/PokedexCard.svelte";
   import { PokemonClient } from "pokenode-ts";
   import _ from "lodash";
+  import { onMount } from "svelte";
 
 
   let result: Record<string, any>;
@@ -9,12 +10,12 @@
   let searchValue: string;
   let origData: Record<string, any>[] = [];
 
-  (async () => {
+  onMount(async () => {
     const api = new PokemonClient();
     result = await api.listPokemons();
     pokedexs = result.results
     origData = result.results
-  })();
+  })
 
   const loadMore = async () => {
     pokedexs = origData
