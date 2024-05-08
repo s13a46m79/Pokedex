@@ -7,8 +7,8 @@ import type { Pokemon } from 'pokenode-ts';
 import PokemonDetailTable from '../../component/PokemonDetailTable.svelte';
 import PokemonStatTable from '../../component/PokemonStatTable.svelte';
 import { formatNumber } from '../../../utils/utils';
-  import PokemonWeakness from '../../component/PokemonWeakness.svelte';
-  import PokemonImages from '../../component/PokemonImages.svelte';
+import PokemonWeakness from '../../component/PokemonWeakness.svelte';
+import PokemonImages from '../../component/PokemonImages.svelte';
 
 const api = new PokemonClient();
 
@@ -28,7 +28,7 @@ onMount(async () => {
 const navigate = (id: number) => {
   console.log(id)
   if(id !== 0) {
-    goto(`${id}`);
+    goto(`/pokemon/${id}`);
     fetchPokemon(id);
   }
 };

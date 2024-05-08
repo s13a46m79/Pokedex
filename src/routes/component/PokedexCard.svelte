@@ -16,7 +16,7 @@
   })()
 
   const navigate = () => {
-    goto(`/Pokedex/pokemon/${data?.id}`)
+    goto(`/pokemon/${data?.id}`)
   }
 
 </script>
